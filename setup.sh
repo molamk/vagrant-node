@@ -1,20 +1,11 @@
-# How to setup a Vagrant box for Nodejs development
-## Initialize the Vagrant box
-```bash
-vagrant init ubuntu/xenial64
-vagrant up
-vagrant ssh
-```
+#!/bin/bash
 
-## Initalize dev tools (optional)\*
-```bash
+# Initalize dev tools (optional)\*
 sudo apt-get update && sudo apt-get upgrade -y && sudo apt-get dist-upgrade -y
 git clone https://github.com/molamk/dotfiles.git
 cd dotfiles && ./setup.sh
-```
 
-## Install node, yarn & nvm
-```bash
+# Install node, yarn & nvm
 # NodeJs
 curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
 sudo apt-get install nodejs -y
@@ -29,8 +20,4 @@ echo 'export NVM_DIR="$HOME/.nvm"
 source ~/.zshrc
 reset
 nvm install node
-```
-
----
-\* Default password is: `vagrant`
 
